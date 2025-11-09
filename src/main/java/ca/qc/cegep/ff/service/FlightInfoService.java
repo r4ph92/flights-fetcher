@@ -2,7 +2,6 @@ package ca.qc.cegep.ff.service;
 
 import ca.qc.cegep.ff.aviation.AviationEdgeService;
 import ca.qc.cegep.ff.aviation.model.FlightResponse;
-import ca.qc.cegep.ff.mqtt.MqttPublisher;
 import ca.qc.cegep.ff.mqtt.MqttService;
 
 import org.springframework.stereotype.Service;
@@ -18,7 +17,6 @@ public class FlightInfoService {
     private static final List<Integer> DISTANCES = List.of(5, 10, 25, 50);
     private static final String NO_FLIGHT = "No flight!";
 
-    private final MqttPublisher mqttPublisher;
     private final MqttService mqttService;
     private final AviationEdgeService aviationEdgeService;
 
@@ -31,7 +29,6 @@ public class FlightInfoService {
             message = response.get().format();
         }
         System.out.println("Publishing flight: " + message);
-        mqttPublisher.publish(message);
         mqttService.sendMessage(message);
     }
 
