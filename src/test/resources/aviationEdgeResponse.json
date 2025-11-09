@@ -1,0 +1,822 @@
+[
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N6SP",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 121.92,
+            "direction": 191,
+            "latitude": 38.6876,
+            "longitude": -75.3569
+        },
+        "speed": {
+            "horizontal": 94.452,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710328
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N80326",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 236.22,
+            "direction": 95,
+            "latitude": 42.1315,
+            "longitude": -72.7233
+        },
+        "speed": {
+            "horizontal": 129.64,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710328
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N982LF",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 312.42,
+            "direction": 168,
+            "latitude": 42.2959,
+            "longitude": -71.8151
+        },
+        "speed": {
+            "horizontal": 111.12,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710328
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "PC12",
+            "icao24": "AD32ED",
+            "icaoCode": "PC12",
+            "regNumber": "N95GJ"
+        },
+        "airline": {
+            "iataCode": "TJ",
+            "icaoCode": "GPD"
+        },
+        "arrival": {
+            "iataCode": "CHO",
+            "icaoCode": "KCHO"
+        },
+        "departure": {
+            "iataCode": "HPN",
+            "icaoCode": "KHPN"
+        },
+        "flight": {
+            "iataNumber": "TJ95",
+            "icaoNumber": "GPD95",
+            "number": "95"
+        },
+        "geography": {
+            "altitude": 182.88,
+            "direction": 219,
+            "latitude": 38.1333,
+            "longitude": -78.45
+        },
+        "speed": {
+            "horizontal": 162.976,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710328
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N717KV",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 60.96,
+            "direction": 48,
+            "latitude": 40.8459,
+            "longitude": -74.0715
+        },
+        "speed": {
+            "horizontal": 229.648,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N912CC",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 175.26,
+            "direction": 179,
+            "latitude": 38.7006,
+            "longitude": -75.3569
+        },
+        "speed": {
+            "horizontal": 127.788,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N145HC",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 327.66,
+            "direction": 14,
+            "latitude": 39.7422,
+            "longitude": -75.5733
+        },
+        "speed": {
+            "horizontal": 225.944,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "A320",
+            "icao24": "A41C69",
+            "icaoCode": "A320",
+            "regNumber": "N364NW"
+        },
+        "airline": {
+            "iataCode": "DL",
+            "icaoCode": "DAL"
+        },
+        "arrival": {
+            "iataCode": "PWM",
+            "icaoCode": "KPWM"
+        },
+        "departure": {
+            "iataCode": "ATL",
+            "icaoCode": "KATL"
+        },
+        "flight": {
+            "iataNumber": "DL2479",
+            "icaoNumber": "DAL2479",
+            "number": "2479"
+        },
+        "geography": {
+            "altitude": 220.98,
+            "direction": 94,
+            "latitude": 43.6493,
+            "longitude": -70.378
+        },
+        "speed": {
+            "horizontal": 244.464,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "6040",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N14VV",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 556.26,
+            "direction": 167,
+            "latitude": 42.7397,
+            "longitude": -76.5907
+        },
+        "speed": {
+            "horizontal": 151.864,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N136VA",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 274.32,
+            "direction": 135,
+            "latitude": 38.1362,
+            "longitude": -78.4527
+        },
+        "speed": {
+            "horizontal": 14.816,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "LJ60",
+            "icao24": "A6E38D",
+            "icaoCode": "LJ60",
+            "regNumber": "N543EZ"
+        },
+        "airline": {
+            "iataCode": "STY",
+            "icaoCode": "STY"
+        },
+        "arrival": {
+            "iataCode": "SYR",
+            "icaoCode": "KSYR"
+        },
+        "departure": {
+            "iataCode": "TEB",
+            "icaoCode": "KTEB"
+        },
+        "flight": {
+            "iataNumber": "STY543",
+            "icaoNumber": "STY543",
+            "number": "543"
+        },
+        "geography": {
+            "altitude": 601.98,
+            "direction": 87,
+            "latitude": 43.1048,
+            "longitude": -76.2147
+        },
+        "speed": {
+            "horizontal": 253.724,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N5446S",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 670.56,
+            "direction": 242,
+            "latitude": 38.2927,
+            "longitude": -77.9251
+        },
+        "speed": {
+            "horizontal": 164.828,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N173KT",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 152.4,
+            "direction": 305,
+            "latitude": 37.2,
+            "longitude": -77.4833
+        },
+        "speed": {
+            "horizontal": 161.124,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N5910V",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 152.4,
+            "direction": 96,
+            "latitude": 42.4728,
+            "longitude": -71.3115
+        },
+        "speed": {
+            "horizontal": 151.864,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "AVL313",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 800.1,
+            "direction": 207,
+            "latitude": 38.6143,
+            "longitude": -77.7743
+        },
+        "speed": {
+            "horizontal": 140.752,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N983SR",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 457.2,
+            "direction": 235,
+            "latitude": 40.9642,
+            "longitude": -74.2737
+        },
+        "speed": {
+            "horizontal": 205.572,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "1200",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N1002Q",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 182.88,
+            "direction": 278,
+            "latitude": 37.5008,
+            "longitude": -77.0969
+        },
+        "speed": {
+            "horizontal": 179.644,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N4250R",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 304.8,
+            "direction": 262,
+            "latitude": 43.2387,
+            "longitude": -77.0939
+        },
+        "speed": {
+            "horizontal": 187.052,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": "",
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N247NE",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 152.4,
+            "direction": 139,
+            "latitude": 41.6898,
+            "longitude": -70.3091
+        },
+        "speed": {
+            "horizontal": 177.792,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    },
+    {
+        "aircraft": {
+            "iataCode": "XXA",
+            "icao24": "XXC",
+            "icaoCode": "XXA",
+            "regNumber": "XXB"
+        },
+        "airline": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "arrival": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "departure": {
+            "iataCode": "",
+            "icaoCode": ""
+        },
+        "flight": {
+            "iataNumber": "XXD",
+            "icaoNumber": "N5177P",
+            "number": "XXF"
+        },
+        "geography": {
+            "altitude": 121.92,
+            "direction": 130,
+            "latitude": 40.1972,
+            "longitude": -74.1395
+        },
+        "speed": {
+            "horizontal": 127.788,
+            "isGround": 0,
+            "vspeed": 0
+        },
+        "status": "unknown",
+        "system": {
+            "squawk": null,
+            "updated": 1762710649
+        }
+    }
+]
