@@ -14,7 +14,5 @@ public class MqttClientConfig {
     private String brokerProtocol;
     private String brokerHost;
     private int brokerPort;
-    private String username;
-    private String password;
     private String flightsTopic;
 }

@@ -14,7 +14,7 @@ import ca.qc.cegep.ff.aviation.model.FlightResponse;
 import ca.qc.cegep.ff.aviation.model.Geography;
 import ca.qc.cegep.ff.aviation.model.Speed;
 import ca.qc.cegep.ff.aviation.model.System;
-import ca.qc.cegep.ff.mqtt.MqttPublisher;
+import ca.qc.cegep.ff.mqtt.MqttService;
 import ca.qc.cegep.ff.service.FlightInfoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
@@ -48,7 +48,6 @@ import wiremock.org.apache.hc.core5.http.HttpHeaders;
                         "aviation-edge.api-context=/api",
                         "aviation-edge.host=localhost:${wiremock.server.port}",
                         "aviation-edge.protocol=http",
-                        "mqtt.username=pubSub",
                         "mqtt.flights-topic=topic/iot/flights/test"
                 })
 @AutoConfigureWireMock(port = 0)
@@ -58,7 +57,7 @@ public class AbstractIT {
     @Autowired
     protected AviationEdgeService aviationEdgeService;
     @Autowired
-    protected MqttPublisher mqttPublisher;
+    protected MqttService mqttService;
 
     @MockitoSpyBean
     protected MessageChannel mqttOutboundChannel;
