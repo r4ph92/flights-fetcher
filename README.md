@@ -16,6 +16,29 @@ A Spring Boot application that fetches real-time flight information for given co
 - Maven 3.6+
 - Aviation Edge API key (sign up at [aviation-edge.com](https://aviation-edge.com))
 - MQTT broker access (default configuration uses HiveMQ Cloud)
+### Aviation Edge
+I want to sincerely thank Aviation Edge for providing me with a free student API key. Their support allowed me to build a realistic project using real-world aviation data. Without their collaboration, this project would not have been able to reach the same level of quality and precision.
+#### Why
+This project is directly linked to flight tracking and data visualization. Aviation Edge enabled me to:
+Work with real data instead of simulated datasets
+Test ideas based on real flight information
+Learn and experiment with modern aviation data infrastructures
+Their generosity towards students is meaningful and greatly appreciated.
+
+#### About
+Aviation Edge is a professional API solution that provides live aviation data from all around the world. Through simple HTTP requests, you can access information such as:
+Real-time flights and positions
+Airline details (IATA / ICAO)
+Airports and runways
+Aircraft types and characteristics
+Flight routes and schedules
+Cities, countries, timezones, and more
+Typical request example:
+
+GET https://aviation-edge.com/v2/public/flights?key=YOUR_API_KEY
+
+Responses are returned in JSON, which makes it easy to parse from any language (JavaScript, Java, Python, etc.).
+
 
 ## Configuration
 
