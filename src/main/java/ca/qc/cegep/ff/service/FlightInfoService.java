@@ -34,13 +34,16 @@ public class FlightInfoService {
 
     private Optional<FlightResponse> getValidResponse(double lng, double lat) {
         FlightResponse response = null;
-        for (int i = 0; i < DISTANCES.size(); i++) {
-            List<FlightResponse> flights = aviationEdgeService.getFlights(lng, lat, i);
+        for (Integer distance : DISTANCES) {
+            List<FlightResponse> flights = aviationEdgeService.getFlights(lng, lat, distance);
             for (FlightResponse flight : flights) {
                 if (flight.isValid()) {
                     response = flight;
                     break;
                 }
+            }
+            if (response != null) {
+                break;
             }
         }
         return Optional.ofNullable(response);

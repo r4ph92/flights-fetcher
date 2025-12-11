@@ -39,6 +39,8 @@ public class FlightResponse {
                 && flight != null && flight.getIataNumber() != null
                 && aircraft != null && aircraft.getIcaoCode() != null
                 && departure != null && departure.getIcaoCode() != null
-                && arrival != null && arrival.getIcaoCode() != null;
+                && arrival != null && arrival.getIcaoCode() != null
+                && !status.equalsIgnoreCase("landed")
+                && !status.equalsIgnoreCase("unknown");
     }
 }

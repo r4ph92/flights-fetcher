@@ -35,17 +35,24 @@ public class AviationEdgeService {
 
     public List<FlightResponse> getFlights(double lng, double lat, int distance) {
         System.out.println("Getting flights for " + lng + ", " + lat + ", " + distance);
-        return restClient.get()
-                .uri(uriBuilder -> uriBuilder
-                        .path(FLIGHTS_PATH)
-                        .queryParam(APIKEY_PARAM, config.getApiKey())
-                        .queryParam(LAT_PARAM, lat)
-                        .queryParam(LNG_PARAM, lng)
-                        .queryParam(LIMIT_PARAM, DEFAULT_LIMIT)
-                        .queryParam(DISTANCE_PARAM, distance)
-                        .build())
-                .header("Content-Type", "application/json")
-                .retrieve()
-                .body(new ParameterizedTypeReference<>() {});
+        try {
+            return restClient.get()
+                    .uri(uriBuilder -> uriBuilder
+                            .path(FLIGHTS_PATH)
+                            .queryParam(APIKEY_PARAM, config.getApiKey())
+                            .queryParam(LAT_PARAM, lat)
+                            .queryParam(LNG_PARAM, lng)
+                            .queryParam(LIMIT_PARAM, DEFAULT_LIMIT)
+                            .queryParam(DISTANCE_PARAM, distance)
+                            .build())
+                    .header("Content-Type", "application/json")
+                    .retrieve()
+                    .body(new ParameterizedTypeReference<List<FlightResponse>>() {
+                    });
+        }
+        catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return List.of();
     }
 }
