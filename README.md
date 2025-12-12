@@ -80,22 +80,6 @@ For local development, create `application-local.properties` to override setting
 java -jar target/flights-fetcher-0.0.1-SNAPSHOT.jar
 ```
 
-## API Endpoints
-
-### Update Coordinates
-
-Update the search coordinates and trigger an immediate flight search:
-
-```bash
-POST http://localhost:8080/api/iot/coordinates?lng=-73.5&lat=45.5
-```
-
-**Parameters:**
-- `lng` (required): Longitude coordinate
-- `lat` (required): Latitude coordinate
-
-**Response:** 202 Accepted
-
 ## Testing
 
 ```bash
@@ -115,7 +99,6 @@ Integration tests use WireMock to mock the Aviation Edge API.
 
 The application follows a layered architecture:
 
-- **Controller Layer** (`CoordinatesController`): REST endpoints for coordinate updates
 - **Service Layer** (`FlightInfoService`): Business logic and orchestration
 - **Integration Layer** (`AviationEdgeService`): External API communication
 - **Messaging Layer** (`MqttService`, `MqttPublisher`): MQTT publishing
@@ -128,7 +111,6 @@ The application follows a layered architecture:
 3. The service queries `AviationEdgeService` with progressive distances (5, 10, 25, 50 km)
 4. First valid flight response is formatted and published to MQTT
 5. If no flights found, publishes "No flight!" message
-6. Coordinates can be updated dynamically via REST endpoint
 
 ## MQTT Message Format
 
