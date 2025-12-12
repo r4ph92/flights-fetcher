@@ -1,4 +1,5 @@
-[
+{
+  "flights": [
     {
         "aircraft": {
             "iataCode": "XXA",
@@ -819,4 +820,5 @@
             "updated": 1762710649
         }
     }
-]
+  ]
+}

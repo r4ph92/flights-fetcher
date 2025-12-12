@@ -32,8 +32,6 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.cloud.contract.wiremock.WireMockConfigurationCustomizer;
 import org.springframework.context.annotation.Bean;
-import org.springframework.messaging.MessageChannel;
-import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 
 import java.util.List;
 
@@ -58,9 +56,6 @@ public class AbstractIT {
     protected AviationEdgeService aviationEdgeService;
     @Autowired
     protected MqttService mqttService;
-
-    @MockitoSpyBean
-    protected MessageChannel mqttOutboundChannel;
 
     protected final ObjectMapper objectMapper = new ObjectMapper();
 

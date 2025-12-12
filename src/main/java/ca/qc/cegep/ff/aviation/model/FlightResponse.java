@@ -23,24 +23,20 @@ public class FlightResponse {
     private System system;
 
     public String format() {
-        return Optional.ofNullable(airline).map(Codes::getIcaoCode).orElse("?")
+        return Optional.ofNullable(departure).map(Codes::getIataCode).orElse("?")
+                + "->"
+                + Optional.ofNullable(arrival).map(Codes::getIataCode).orElse("?")
                 + " "
                 + Optional.ofNullable(flight).map(Flight::getIataNumber).orElse("?")
-                + "("
-                + Optional.ofNullable(aircraft).map(Aircraft::getIcaoCode).orElse("?")
-                + ") "
-                + Optional.ofNullable(departure).map(Codes::getIcaoCode).orElse("?")
-                + "->"
-                + Optional.ofNullable(arrival).map(Codes::getIcaoCode).orElse("?");
+                + " "
+                + Optional.ofNullable(aircraft).map(Codes::getIataCode).orElse("?");
+
     }
 
     public boolean isValid() {
-        return airline != null && airline.getIcaoCode() != null
-                && flight != null && flight.getIataNumber() != null
-                && aircraft != null && aircraft.getIcaoCode() != null
-                && departure != null && departure.getIcaoCode() != null
-                && arrival != null && arrival.getIcaoCode() != null
-                && !status.equalsIgnoreCase("landed")
-                && !status.equalsIgnoreCase("unknown");
+        return flight != null && flight.getIataNumber() != null
+                && aircraft != null && aircraft.getIataCode() != null
+                && departure != null && departure.getIataCode() != null
+                && arrival != null && arrival.getIataCode() != null;
     }
 }

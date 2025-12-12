@@ -25,30 +25,25 @@ public class MqttService {
 
     @PostConstruct
     public void init() throws Exception {
-        String broker = clientConfig.getBrokerProtocol() + "://" + clientConfig.getBrokerHost() + ":" + clientConfig.getBrokerProtocol();
+        String broker = clientConfig.getBrokerProtocol() + "://" + clientConfig.getBrokerHost() + ":" + clientConfig.getBrokerPort();
         client = new MqttClient(broker, CLIENT_ID);
         client.setCallback(new MqttCallback() {
             public void connectComplete(boolean reconnect, String serverURI) {
-                System.out.println("connected to: " + serverURI);
             }
 
             public void disconnected(MqttDisconnectResponse disconnectResponse) {
-                System.out.println("disconnected: " + disconnectResponse.getReasonString());
             }
 
             public void deliveryComplete(IMqttToken token) {
-                System.out.println("deliveryComplete: " + token.isComplete());
             }
 
-            public void messageArrived(String topic, MqttMessage message) throws Exception {
+            public void messageArrived(String topic, MqttMessage message) {
             }
 
             public void mqttErrorOccurred(MqttException exception) {
-                System.out.println("mqttErrorOccurred: " + exception.getMessage());
             }
 
             public void authPacketArrived(int reasonCode, MqttProperties properties) {
-                System.out.println("authPacketArrived");
             }
         });
     }
@@ -61,9 +56,8 @@ public class MqttService {
             client.publish(clientConfig.getFlightsTopic(), message);
 
             client.disconnect();
-            client.close();
         } catch (MqttException e) {
-            e.printStackTrace();
+            System.err.println("Unable to publish MQTT message: " + e.getMessage());
         }
     }
 }

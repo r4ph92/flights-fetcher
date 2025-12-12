@@ -1,4 +1,4 @@
-package ca.qc.cegep.ff;
+package ca.qc.cegep.ff.mqtt;
 
 import org.eclipse.paho.mqttv5.client.IMqttToken;
 import org.eclipse.paho.mqttv5.client.MqttCallback;

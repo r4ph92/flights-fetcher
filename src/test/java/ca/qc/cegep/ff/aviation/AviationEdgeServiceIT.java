@@ -26,7 +26,7 @@ public class AviationEdgeServiceIT extends AbstractIT {
     @Test
     void testGetFlights() throws Exception {
         List<FlightResponse> expectedResponse = setupAviationMock();
-        List<FlightResponse> response = aviationEdgeService.getFlights(43.001, 0.2345, 5);
+        List<FlightResponse> response = aviationEdgeService.getFlights(5);
         assertNotNull(response);
         assertEquals(1, response.size());
         assertEquals(expectedResponse.getFirst(), response.getFirst());
@@ -39,7 +39,7 @@ public class AviationEdgeServiceIT extends AbstractIT {
                 .withHeader(CONTENT_TYPE, ContentType.APPLICATION_JSON.getMimeType())
                 .withBody(aviationEdgeResponseJson.getInputStream().readAllBytes())));
 
-        List<FlightResponse> response = aviationEdgeService.getFlights(43.001, 0.2345, 5);
+        List<FlightResponse> response = aviationEdgeService.getFlights(5);
         assertNotNull(response);
         assertEquals(20, response.size());
     }

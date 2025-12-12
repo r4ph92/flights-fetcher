@@ -14,13 +14,17 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class AviationEdgeService {
-    private static final int DEFAULT_LIMIT = 1;
     private static final String FLIGHTS_PATH = "/flights";
-    private static final String LAT_PARAM = "lat";
     private static final String APIKEY_PARAM = "key";
     private static final String LNG_PARAM = "lng";
+    private static final String LNG_VALUE = "-73.7408";
+    private static final String LAT_PARAM = "lat";
+    private static final String LAT_VALUE = "45.4706";
     private static final String LIMIT_PARAM = "limit";
+    private static final int LIMIT_VALUE = 10;
     private static final String DISTANCE_PARAM = "distance";
+    private static final String STATUS_PARAM = "status";
+    private static final String STATUS_VALUE = "en-route";
 
     private final AviationEdgeClientConfig config;
     private RestClient restClient;
@@ -33,16 +37,17 @@ public class AviationEdgeService {
         System.out.println("Baseurl: " + config.getProtocol() + "://" + config.getHost() + "/" + config.getApiContext());
     }
 
-    public List<FlightResponse> getFlights(double lng, double lat, int distance) {
-        System.out.println("Getting flights for " + lng + ", " + lat + ", " + distance);
+    public List<FlightResponse> getFlights(int distance) {
+        System.out.println("Getting flights for distance= " + distance);
         try {
             return restClient.get()
                     .uri(uriBuilder -> uriBuilder
                             .path(FLIGHTS_PATH)
                             .queryParam(APIKEY_PARAM, config.getApiKey())
-                            .queryParam(LAT_PARAM, lat)
-                            .queryParam(LNG_PARAM, lng)
-                            .queryParam(LIMIT_PARAM, DEFAULT_LIMIT)
+                            .queryParam(LAT_PARAM, LAT_VALUE)
+                            .queryParam(LNG_PARAM, LNG_VALUE)
+                            .queryParam(LIMIT_PARAM, LIMIT_VALUE)
+                            .queryParam(STATUS_PARAM, STATUS_VALUE)
                             .queryParam(DISTANCE_PARAM, distance)
                             .build())
                     .header("Content-Type", "application/json")
