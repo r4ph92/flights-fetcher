@@ -17,4 +17,8 @@ public class FlightFetcher {
         System.out.println("Refreshing Flight Info");
         flightInfoService.fetchAndPublishFlight();
     }
+
+    public void onDemand(String lng, String lat) {
+        flightInfoService.onDemandFetchAndPublishFlight(lng, lat);
+    }
 }

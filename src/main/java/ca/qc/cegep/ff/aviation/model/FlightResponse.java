@@ -30,13 +30,12 @@ public class FlightResponse {
                 + Optional.ofNullable(flight).map(Flight::getIataNumber).orElse("?")
                 + " "
                 + Optional.ofNullable(aircraft).map(Codes::getIataCode).orElse("?");
-
     }
 
     public boolean isValid() {
-        return flight != null && flight.getIataNumber() != null
-                && aircraft != null && aircraft.getIataCode() != null
-                && departure != null && departure.getIataCode() != null
-                && arrival != null && arrival.getIataCode() != null;
+        return flight != null && flight.getIataNumber() != null && !flight.getIataNumber().isBlank()
+                && aircraft != null && aircraft.getIataCode() != null && !aircraft.getIataCode().isBlank()
+                && departure != null && departure.getIataCode() != null && !departure.getIataCode().isBlank()
+                && arrival != null && arrival.getIataCode() != null && !arrival.getIataCode().isBlank();
     }
 }

@@ -19,6 +19,7 @@ public class CoordinatesController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void postCoordinates(@RequestParam("lng") double lng, @RequestParam("lat") double lat) {
         System.out.println("Received request for lng=" + lng + " and lat=" + lat + ".");
+        flightFetcher.onDemand(String.valueOf(lng), String.valueOf(lat));
     }
 
 }

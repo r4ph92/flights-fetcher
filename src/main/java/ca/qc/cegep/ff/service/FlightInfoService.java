@@ -20,6 +20,18 @@ public class FlightInfoService {
     private final MqttService mqttService;
     private final AviationEdgeService aviationEdgeService;
 
+    public void onDemandFetchAndPublishFlight(String lng, String lat) {
+        Optional<FlightResponse> response = getValidResponse(lng, lat);
+        String message;
+        if (response.isEmpty()) {
+            message = NO_FLIGHT;
+        } else {
+            message = response.get().format();
+        }
+        System.out.println("Publishing flight: " + message);
+        mqttService.sendMessage(message);
+    }
+
     public void fetchAndPublishFlight() {
         Optional<FlightResponse> response = getValidResponse();
         String message;
@@ -36,6 +48,23 @@ public class FlightInfoService {
         FlightResponse response = null;
         for (Integer distance : DISTANCES) {
             List<FlightResponse> flights = aviationEdgeService.getFlights(distance);
+            for (FlightResponse flight : flights) {
+                if (flight.isValid()) {
+                    response = flight;
+                    break;
+                }
+            }
+            if (response != null) {
+                break;
+            }
+        }
+        return Optional.ofNullable(response);
+    }
+
+    private Optional<FlightResponse> getValidResponse(String lng, String lat) {
+        FlightResponse response = null;
+        for (Integer distance : DISTANCES) {
+            List<FlightResponse> flights = aviationEdgeService.getFlights(distance, lng, lat);
             for (FlightResponse flight : flights) {
                 if (flight.isValid()) {
                     response = flight;

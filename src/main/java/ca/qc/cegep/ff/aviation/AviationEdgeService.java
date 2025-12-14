@@ -38,14 +38,18 @@ public class AviationEdgeService {
     }
 
     public List<FlightResponse> getFlights(int distance) {
+        return getFlights(distance, LNG_VALUE, LAT_VALUE);
+    }
+
+    public List<FlightResponse> getFlights(int distance, String lng, String lat) {
         System.out.println("Getting flights for distance= " + distance);
         try {
             return restClient.get()
                     .uri(uriBuilder -> uriBuilder
                             .path(FLIGHTS_PATH)
                             .queryParam(APIKEY_PARAM, config.getApiKey())
-                            .queryParam(LAT_PARAM, LAT_VALUE)
-                            .queryParam(LNG_PARAM, LNG_VALUE)
+                            .queryParam(LAT_PARAM, lat)
+                            .queryParam(LNG_PARAM, lng)
                             .queryParam(LIMIT_PARAM, LIMIT_VALUE)
                             .queryParam(STATUS_PARAM, STATUS_VALUE)
                             .queryParam(DISTANCE_PARAM, distance)
