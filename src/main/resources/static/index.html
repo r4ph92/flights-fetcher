@@ -29,17 +29,16 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // ✅ Change this to your Spring endpoint
-    const SPRING_URL = "http://192.168.18.47:8080/api/iot/coordinates"; //à changer selon ip address pi
+    const SPRING_URL = "http://10.3.3.42:8080/api/iot/coordinates"; //à changer selon ip address pi
 
     const out = document.getElementById("out");
     const sendBtn = document.getElementById("send");
 
-    const map = L.map("map").setView([45.5019, -73.5674], 11); // default: Montreal
+    const map = L.map("map").setView([45.5019, -73.5674], 11);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19 }).addTo(map);
 
     let marker = null;
-    let last = null; // { lat, lng }
+    let last = null;
 
     const fmt = n => Number(n).toFixed(4);
 
@@ -67,7 +66,6 @@
     sendBtn.addEventListener("click", async () => {
         if (!last) return;
 
-        // payload your Spring service can parse
         const payload = { lng: last.lng, lat: last.lat };
 
         try {
