@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pick coordinates</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        html,body{height:100%;margin:0;font-family:system-ui,sans-serif}
+        #map{height:100%}
+        #ui{
+            position:absolute;left:12px;top:12px;z-index:999;
+            background:#fff;padding:10px 12px;border-radius:10px;
+            box-shadow:0 4px 14px rgba(0,0,0,.12)
+        }
+        #out{margin-top:6px;font-family:ui-monospace,Menlo,monospace}
+        button{margin-top:8px}
+    </style>
+</head>
+<body>
+<div id="ui">
+    <div>Click the map to drop a pin</div>
+    <div id="out">lng -, lat -</div>
+    <button id="send" type="button" disabled>Send to Spring</button>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // ✅ Change this to your Spring endpoint
+    const SPRING_URL = "http://192.168.18.47:8080/api/iot/coordinates"; //à changer selon ip address pi
+
+    const out = document.getElementById("out");
+    const sendBtn = document.getElementById("send");
+
+    const map = L.map("map").setView([45.5019, -73.5674], 11); // default: Montreal
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19 }).addTo(map);
+
+    let marker = null;
+    let last = null; // { lat, lng }
+
+    const fmt = n => Number(n).toFixed(4);
+
+    function updateUI(lat, lng) {
+        out.textContent = `lng ${fmt(lng)}, lat ${fmt(lat)}`;
+        last = { lat, lng };
+        sendBtn.disabled = false;
+    }
+
+    function placePin(lat, lng) {
+        if (!marker) {
+            marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+            marker.on("dragend", () => {
+                const p = marker.getLatLng();
+                updateUI(p.lat, p.lng);
+            });
+        } else {
+            marker.setLatLng([lat, lng]);
+        }
+        updateUI(lat, lng);
+    }
+
+    map.on("click", (e) => placePin(e.latlng.lat, e.latlng.lng));
+
+    sendBtn.addEventListener("click", async () => {
+        if (!last) return;
+
+        // payload your Spring service can parse
+        const payload = { lng: last.lng, lat: last.lat };
+
+        try {
+            const res = await fetch(SPRING_URL+"?lng=" + last.lng + "&lat=" + last.lat, {
+                method: "POST",
+            });
+
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            sendBtn.textContent = "Sent ✅";
+            setTimeout(() => (sendBtn.textContent = "Send to Spring"), 1200);
+        } catch (err) {
+            alert("Failed to send. If you see a CORS error, enable CORS in Spring.\n\n" + err);
+        }
+    });
+</script>
+</body>
+</html>
