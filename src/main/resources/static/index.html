@@ -74,7 +74,7 @@
             });
 
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            sendBtn.textContent = "Sent ✅";
+            sendBtn.textContent = "Sent";
             setTimeout(() => (sendBtn.textContent = "Send to Spring"), 1200);
         } catch (err) {
             alert("Failed to send. If you see a CORS error, enable CORS in Spring.\n\n" + err);
